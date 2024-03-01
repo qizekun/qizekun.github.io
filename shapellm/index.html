@@ -134,12 +134,9 @@
                 <div class="title sansfont mode-font" style="font-family:'Acme';color:#595959;">
                     Pipeline
                 </div>
-            <div class="content has-text-justified">
             <img src="./static/assets/framework.jpg" style="max-width: 100%">
-        </div>
             </div>
         </div>
-
     </div>
 </section>
 
@@ -151,6 +148,31 @@
                 <div class="title sansfont mode-font" style="font-family:'Acme';color:#595959;">
                     🔥Highlights
                 </div>
+                <div class="content has-text-justified">
+                    <ol type="1">
+                        <li>ShapeLLM is the first 3D Multimodal Large Language Model designed for <span style="color: #fe8e8e;"><b>embodied interaction</b></span>.</li>
+                        <br>
+                        <li>ShapeLLM supports <span style="color: #fe8e8e;"><b>single-view colored point clouds inputs</b></span>, which can be effortlessly obtained from RGBD cameras.</li>
+                        <br>
+                        <li>We introduce a robust 3D QA benchmark, <span style="color: #fe8e8e;"><b>3D MM-Vet</b></span>, encompassing various variants including single-view, noise jitter, etc.</li>
+                        <br>
+                        <li>We extended the powerful point encoder architecture, <span style="color: #fe8e8e;"><b>ReCon++</b></span>, achieving state-of-the-art performance across a range of representation learning tasks.</li>
+                        <br>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="hero">
+    <div class="hero-body-subtitle"  style="display: block">
+        <div class="columns is-centered has-text-centered">
+            <div class="container is-max-maxwidth">
+                <div class="title sansfont mode-font" style="font-family:'Acme';color:#595959;">
+                    Motivation
+                </div>
             <div class="content has-text-justified">
             <b>What makes better 3D representations that bridge language models and interaction-oriented 3D object understanding?</b>
             <ol type="1">
@@ -158,7 +180,7 @@
                 <br>
                 <li><b>Selective Multi-View Distillation</b>. Interacting with objects typically necessitates an intricate 3D understanding that involves knowledge at various levels and granularities. For instance, a whole-part high-level semantic understanding is needed for interactions like opening a large cabinet, while detailed, high-resolution (i.e., low-level) semantics are crucial for smaller objects like manipulating a drawer handle. However, existing works mainly distill single-view high-resolution object features from 2D foundation models, providing a complementary understanding. The potential of multi-view images, which offer abundant multilevel features due to view variation and geometry consistency, is often neglected.</li>
                 <br>
-                <li><b>3D Visual Instruction Tuning</b>. 3D Visual Instruction Tuning Instruction tuning has been proven effective in improving LLMs' alignment capability. To realize various 3D understanding tasks with a universal language interface, ShapeLLM is trained through instruction-following tuning on constructed language-output data. However, similar to 2D visual instruction tuning, the data-dessert issue is even worse since no object-level data is available, unlike 2D. To validate the efficacy of ShapeLLM, we first construct ~45K instruction-following data using the advanced GPT-4V(ision) on the processed Objaverse dataset and 30K embodied part understanding data from GAPartNet for supervised fine-tuning.</li>
+                <li><b>3D Visual Instruction Tuning</b>. Instruction tuning has been proven effective in improving LLMs' alignment capability. To realize various 3D understanding tasks with a universal language interface, ShapeLLM is trained through instruction-following tuning on constructed language-output data. However, similar to 2D visual instruction tuning, the data-dessert issue is even worse since no object-level data is available, unlike 2D. To validate the efficacy of ShapeLLM, we first construct ~45K instruction-following data using the advanced GPT-4V on the processed Objaverse dataset and 30K embodied part understanding data from GAPartNet for supervised fine-tuning.</li>
             </ol>
         </div>
             </div>
