@@ -4,7 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c788de39-f826-4298-aff4-3147ab2956e7" name="更改" comment="更改" />
+    <list default="true" id="c788de39-f826-4298-aff4-3147ab2956e7" name="更改" comment="更改">
+      <change afterPath="$PROJECT_DIR$/sofar/images/moka_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sofar/images/pipeline.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sofar/images/robustness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sofar/images/robustness_drawer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sofar/images/robustness_fur_removal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sofar/paper.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sofar/videos/dexhand_1.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sofar/videos/dexhand_2.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sofar/videos/dexhand_3.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sofar/videos/dexhand_4.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sofar/videos/dexhand_5.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sofar/videos/gripper_1.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sofar/videos/gripper_2.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sofar/videos/gripper_3.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sofar/videos/gripper_4.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sofar/videos/gripper_5.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sofar/videos/gripper_6.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sofar/videos/teaser.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/font/ALLEGRO.TTF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/font/Acme-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/font/Edo-SZ.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/font/Jellee-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/font/LEVIBRUSH.TTF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/font/PressStart2P-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sofar/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/static/assets/Thumbs.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/static/assets/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/static/assets/bib.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/static/assets/framework.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/static/assets/icon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/static/assets/mmvet.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/static/assets/p1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/static/assets/p2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/static/assets/p3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/static/assets/p4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/static/assets/p5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/static/assets/p6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/static/assets/p7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/static/assets/p8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/static/assets/shapellm.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/static/assets/table.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/static/css/custom.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/sofar/static/css/custom.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sofar/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/sofar/static/css/index.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +81,19 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sofar/static/new" />
+      <recent name="$PROJECT_DIR$/sofar/static/old" />
+      <recent name="$PROJECT_DIR$/sofar" />
+      <recent name="$PROJECT_DIR$/sofar/static/css" />
+      <recent name="$PROJECT_DIR$/sofar/static/js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sofar/static" />
+      <recent name="$PROJECT_DIR$/sofar" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">

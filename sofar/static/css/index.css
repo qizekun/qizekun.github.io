@@ -1,7 +1,16 @@
 body {
   font-family: 'Noto Sans', sans-serif;
+  width: 70%;
+  margin: 20px auto 0px;
 }
 
+.my-block {
+    margin-bottom: 50px;
+}
+
+.my-block-new {
+    margin-bottom: 0px;
+}
 
 .footer .icon-link {
     font-size: 25px;
@@ -10,13 +19,11 @@ body {
 
 .link-block a {
     margin-top: 5px;
-    margin-bottom: 5px;
 }
 
 .dnerf {
   font-variant: small-caps;
 }
-
 
 .teaser .hero-body {
   padding-top: 0;
@@ -85,10 +92,6 @@ body {
 .publication-banner img {
 }
 
-.publication-authors {
-  /*color: #4286f4;*/
-}
-
 .publication-video {
     position: relative;
     width: 100%;
@@ -122,18 +125,10 @@ body {
     display: flex;
 }
 
-/*.results-carousel video {*/
-/*    margin: 0;*/
-/*    width: 300px;*/
-/*}*/
-
 .slider-pagination .slider-page {
   background: #000000;
 }
 
-.eql-cntrb { 
+.eql-cntrb {
   font-size: smaller;
 }
-
-
-
