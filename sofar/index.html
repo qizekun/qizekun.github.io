@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="SoFar: Advancing Spatial Intelligence with Orientation Foundation Model for Robotic Manipulation">
+        content="SoFar: Language-Grounded Orientation Bridges Spatial Reasoning and Object Manipulation">
   <meta name="keywords" content="Orientation Foundation Model, Spatial Intelligence, Robotic Manipulation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SoFar: Advancing Spatial Intelligence with Orientation Foundation Model for Robotic Manipulation</title>
+  <title>SoFar: Language-Grounded Orientation Bridges Spatial Reasoning and Object Manipulation</title>
 	<link rel="icon" type="image/png" href="images/moka_icon.png"/>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -169,7 +169,10 @@
             <video id="teaser" autoplay muted loop>
               <source src="videos/teaser.mp4" type="video/mp4">
             </video>
-            <button id="toggleSound" class="sound-btn">🔇</button>
+            <!-- 静音按钮（右下角） -->
+            <button id="toggleSound" class="control-btn sound-btn">🔇</button>
+            <!-- 播放按钮（左下角） -->
+            <button id="togglePlay" class="control-btn play-btn">⏸️</button>
           </div>
         </div>
       </div>
@@ -180,7 +183,7 @@
 <style>
   .video-container {
     position: relative;
-    width: 80%;
+    width: 82%;
   }
 
   video {
@@ -189,10 +192,8 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
 
-  .sound-btn {
+  .control-btn {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
     background: rgba(0, 0, 0, 0.6);
     color: white;
     border: none;
@@ -207,23 +208,42 @@
     transition: background 0.3s ease;
   }
 
-  .sound-btn:hover {
+  .control-btn:hover {
     background: rgba(0, 0, 0, 0.8);
+  }
+
+  .sound-btn {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .play-btn {
+    bottom: 10px;
+    left: 10px;
   }
 </style>
 
 <script>
-  document.getElementById("toggleSound").addEventListener("click", function () {
-    let video = document.getElementById("teaser");
-    if (video.muted) {
-      video.muted = false;
-      this.innerHTML = "🔊";
+  let video = document.getElementById("teaser");
+  let soundBtn = document.getElementById("toggleSound");
+  let playBtn = document.getElementById("togglePlay");
+
+  soundBtn.addEventListener("click", function () {
+    video.muted = !video.muted;
+    this.innerHTML = video.muted ? "🔇" : "🔊";
+  });
+
+  playBtn.addEventListener("click", function () {
+    if (video.paused) {
+      video.play();
+      this.innerHTML = "⏸️";
     } else {
-      video.muted = true;
-      this.innerHTML = "🔇";
+      video.pause();
+      this.innerHTML = "▶️";
     }
   });
 </script>
+
 
 
 <section class="section">
