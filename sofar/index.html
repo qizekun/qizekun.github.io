@@ -169,9 +169,7 @@
             <video id="teaser" autoplay muted loop>
               <source src="videos/teaser.mp4" type="video/mp4">
             </video>
-            <!-- 静音按钮（右下角） -->
             <button id="toggleSound" class="control-btn sound-btn">🔇</button>
-            <!-- 播放按钮（左下角） -->
             <button id="togglePlay" class="control-btn play-btn">⏸️</button>
           </div>
         </div>
@@ -183,7 +181,7 @@
 <style>
   .video-container {
     position: relative;
-    width: 82%;
+    width: 85%;
   }
 
   video {
@@ -260,10 +258,13 @@
                 2. We introduce the concept of <b style="color: #fe8e8e">semantic orientation</b>, representing the object orientation condition on open vocabulary language. Such as the orientation of <i><b>"top," "handle," and "pouring water."</b></i>
             </p>
             <p>
-                3. We construct <b style="color: #fe8e8e">OrienText300K</b>, a large paired dataset of point clouds, text, and orientation. We trained <b style="color: #fe8e8e">PointOFM</b>, the first Orientation Foundation Model.
+                3. We construct <b style="color: #fe8e8e">OrienText300K</b>, a large paired dataset of point clouds, text, and orientation. We trained <b style="color: #fe8e8e">PointSO</b>, the first Open-Vocabulary Orientation Model.
             </p>
             <p>
-                4. Based on SAM and PointOFM, we propose <b style="color: #fe8e8e">SoFar, the first 6-DoF spatial intelligence LLM</b>, which achieves a 13.1% performance improvement on the 6-DoF object rearrangement task and a 38.2% improvement over OpenVLA on the SimplerEnv benchmark.
+                4. Based on PointSO, we propose <b style="color: #fe8e8e">SoFar, the first 6-DoF spatial understanding LLM</b>, which achieves a 13.1% performance improvement on the 6-DoF object rearrangement task and a 47.2% improvement over OpenVLA on the SimplerEnv benchmark.
+            </p>
+            <p>
+                5. We propose two benchmarks, <b>Open6DOR V2</b> and <b>6-DoF SpatialBench</b>, which evaluate 6-DoF rearrangement capability and 6-DoF spatial understanding capability, respectively.
             </p>
           </div>
         </div>
@@ -279,7 +280,7 @@
 <!--          <div class="content has-text-justified">-->
 <!--            <p>-->
 <!--              Spatial intelligence is an indispensable part of embodied AI. Recent works endow embodied agents with limited aspects of spatial intelligence by developing the ability to perceive object locations and positional relations, overlooking precise perception of object orientation. Legging behind in this aspect renders limited robotic manipulation capabilities for numerous tasks requiring intra-object spatial understanding, e.g., stocking goods into a shelf with their logos oriented toward the customers. In this paper, we advance spatial intelligence to the next level by investigating orientational intelligence. We make the first endeavor to connect semantics to object orientation, obviating the need to describe object orientations based on references or canonical status.-->
-<!--              Specifically, we build an orientation foundation model, namely PointOFM, which infers direction vectors clearly associated with a specific object interaction function. To train PointOFM, we curate OrienText300K, a large-scale 3D model dataset annotated with semantic direction vectors. Furthermore, we integrate PointOFM into a Vision-and-Language Model (VLM) system to generate actions for robotic manipulation with both positional and orientational awareness.-->
+<!--              Specifically, we build an orientation foundation model, namely PointSO, which infers direction vectors clearly associated with a specific object interaction function. To train PointSO, we curate OrienText300K, a large-scale 3D model dataset annotated with semantic direction vectors. Furthermore, we integrate PointSO into a Vision-and-Language Model (VLM) system to generate actions for robotic manipulation with both positional and orientational awareness.-->
 <!--              Extensive experiments on simulation and real-world environments demonstrate that we make full-stack contributions in endowing embodied agents with groundbreaking manipulation capabilities.-->
 <!--            </p>-->
 <!--          </div>-->
@@ -475,6 +476,34 @@
               <div class="column has-text-centered">
                 <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/navi_2.mp4' type='video/mp4'></video>
                   Move to facing the third chair‘s back.
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <br>
+
+    <div class="my-block">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Close-Loop Planning</h2>
+          <div>
+          <h2 class="content has-text-justified">
+              We demonstrate the closed-loop replan capabilities of SoFar within Simpler-Env.
+              <br>
+              In (a), model accidentally knocks over the Coke can during motion. Subsequently, we re-plan and successfully achieve the grasp.
+              <br>
+              In (b), model initially misidentified the coke can as a Fanta can. After correction, the model re-identifies and locates the correct object.
+          </h2>
+
+          <div class="rows">
+            <div class="columns">
+              <div class="column has-text-centered">
+                <video class='lazy' autoplay loop muted width='100%' ><source data-src='./videos/close_loop1.mp4' type='video/mp4'></video>
+                  (a) Pick coke can.
+              </div>
+              <div class="column has-text-centered">
+                <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/close_loop2.mp4' type='video/mp4'></video>
+                  (b) Pick coke can.
               </div>
             </div>
           </div>
