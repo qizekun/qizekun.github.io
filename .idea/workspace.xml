@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c788de39-f826-4298-aff4-3147ab2956e7" name="更改" comment="更改">
-      <change afterPath="$PROJECT_DIR$/sofar/images/sofar_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sofar/sofar.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sofar/videos/new_1.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sofar/videos/new_2.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sofar/videos/new_3.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sofar/videos/new_4.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sofar/videos/new_5.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sofar/videos/new_6.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sofar/images/moka_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sofar/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sofar/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sofar/paper.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sofar/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/sofar/static/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sofar/static/css/custom.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/sofar/static/css/custom.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sofar/videos/teaser.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/sofar/videos/teaser.mp4" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
