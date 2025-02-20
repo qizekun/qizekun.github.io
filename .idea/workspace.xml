@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c788de39-f826-4298-aff4-3147ab2956e7" name="更改" comment="更改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,17 +35,17 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/qizekun/work/qizekun.github.io/sofar/videos",
+    "last_opened_file_path": "/Users/qizekun/work/qizekun.github.io/images",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$/sofar/videos" />
       <recent name="$PROJECT_DIR$/sofar" />
       <recent name="$PROJECT_DIR$/sofar/images" />
       <recent name="$PROJECT_DIR$/sofar/static/new" />
-      <recent name="$PROJECT_DIR$/sofar/static/old" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/sofar/static" />
