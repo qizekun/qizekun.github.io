@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="SoFar: Language-Grounded Orientation Bridges Spatial Reasoning and Object Manipulation">
+  <meta name="keywords" content="Orientation Foundation Model, Spatial Intelligence, Robotic Manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SoFar: Language-Grounded Orientation Bridges Spatial Reasoning and Object Manipulation</title>
+	<link rel="icon" type="image/png" href="images/sofar_icon.png"/>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+    <link rel="stylesheet" href="./static/css/own.min.css">
+    <link rel="stylesheet" href="./static/css/custom.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Shantell+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" rel="stylesheet"/>
+    <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <script defer src="./static/js/index.min.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title" style="font-size: 44.5px;">
+              <a class="word1 shakefont" style="color: #FFC5C5">S</a><a class="word2 shakefont" style="color: #ecd1aa">o</a><a class="word3 shakefont" style="color: #fe8e8e">F</a><a class="word4 shakefont" style="color: #98d4e6">a</a><a class="word5 shakefont" style="color: #c8a4dd">r</a>:
+              <a target="_blank" style="color: black" href="https://qizekun.github.io/SoFar">Language-Grounded Orientation Bridges Spatial Reasoning and Object Manipulation</a></h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://qizekun.github.io/">Zekun Qi<sup>13*</sup></a></span>,
+            <span class="author-block">
+              <a href="https://qizekun.github.io/">Wenyao Zhang<sup>237*</sup></a></span>,
+            <span class="author-block">
+                <a href="https://selina2023.github.io/">Yufei Ding<sup>34*</sup></a></span>,
+            <span class="author-block">
+              <a href="https://runpeidong.web.illinois.edu/">Runpei Dong<sup>5</sup></a></span>,
+            <span class="author-block">
+              <a href="https://qizekun.github.io">Xinqiang Yu<sup>3</sup></a></span>
+            <br>
+            <span class="author-block">
+              <a href="https://qizekun.github.io">Jingwen Li<sup>4</sup></a></span>,
+            <span class="author-block">
+              <a href="https://qizekun.github.io">Lingyun Xu<sup>4</sup></a></span>,
+            <span class="author-block">
+                <a href="https://boey-li.github.io/">Baoyu Li<sup>5</sup></a></span>,
+            <span class="author-block">
+              <a href="https://xialin-he.github.io/">Xialin He<sup>5</sup></a></span>,
+            <span class="author-block">
+              <a href="https://github.com/Asterisci/">Guofan Fan<sup>1</sup></a></span>,
+            <span class="author-block">
+              <a href="https://jzhzhang.github.io/">Jiazhao Zhang<sup>3</sup></a></span>,
+            <span class="author-block">
+              <a href="https://jiaweihe.com/">Jiawei He<sup>3</sup></a></span>
+            <br>
+            <span class="author-block">
+              <a href="https://jiayuan-gu.github.io/">Jiayuan Gu<sup>6</sup></a></span>,
+            <span class="author-block">
+              <a href="http://home.ustc.edu.cn/~jinxustc/">Xin Jin<sup>7</sup></a></span>,
+            <span class="author-block">
+                <a href="https://group.iiis.tsinghua.edu.cn/~maks/">Kaisheng Ma<sup>1</sup></a></span>,
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=X7M0I8kAAAAJ&hl=en">Zhizheng Zhang<sup>3†</sup></a></span>,
+            <span class="author-block">
+                <a href="https://hughw19.github.io/">He Wang<sup>34†</sup></a></span>,
+            <span class="author-block">
+              <a href="https://ericyi.github.io/">Li Yi<sup>189†</sup></a></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">* equal contribution</span>
+            <span class="author-block">† corresponding authors</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Tsinghua University</span>
+            <span class="author-block"><sup>2</sup>Shanghai Jiao Tong University</span>
+            <span class="author-block"><sup>3</sup>Galbot</span>
+            <span class="author-block"><sup>4</sup>Peking University</span>
+            <span class="author-block"><sup>5</sup>UIUC</span>
+            <br>
+            <span class="author-block"><sup>6</sup>ShanghaiTech University</span>
+            <span class="author-block"><sup>7</sup>Eastern Institute of Technology</span>
+            <span class="author-block"><sup>8</sup>Shanghai Qi Zhi Institute</span>
+            <span class="author-block"><sup>9</sup>Shanghai AI Laboratory</span>
+          </div>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+
+              <span class="link-block">
+                <a target="_blank" href="sofar.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2502.13143"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://youtu.be/RRKEABZzbwA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/qizekun/SoFar"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/collections/qizekun/sofar-67b511129d3146d28cea9920"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa-face-smiling-hands"></i>
+                  </span>
+                  <span>Huggingface</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-fullhd">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered is-centered">
+          <div class="video-container">
+            <video id="teaser" autoplay muted loop>
+              <source src="videos/teaser.mp4" type="video/mp4">
+            </video>
+            <button id="toggleSound" class="control-btn sound-btn">🔇</button>
+            <button id="togglePlay" class="control-btn play-btn">⏸️</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .video-container {
+    position: relative;
+    width: 85%;
+  }
+
+  video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .control-btn {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .control-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .sound-btn {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .play-btn {
+    bottom: 10px;
+    left: 10px;
+  }
+</style>
+
+<script>
+  let video = document.getElementById("teaser");
+  let soundBtn = document.getElementById("toggleSound");
+  let playBtn = document.getElementById("togglePlay");
+
+  soundBtn.addEventListener("click", function () {
+    video.muted = !video.muted;
+    this.innerHTML = video.muted ? "🔇" : "🔊";
+  });
+
+  playBtn.addEventListener("click", function () {
+    if (video.paused) {
+      video.play();
+      this.innerHTML = "⏸️";
+    } else {
+      video.pause();
+      this.innerHTML = "▶️";
+    }
+  });
+</script>
+
+
+
+<section class="section">
+   <div class="container is-max-desktop">
+    <div class="my-block">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Highlight</h2>
+          <div class="content has-text-justified" style="text-weight: bold;">
+            <p>
+                1. Complex robotic manipulation tasks are constrained by the understanding of orientation, such as <i><b>"upright a tilted wine glass"</b></i>, or <i><b>"plugging a cord into a power strip."</b></i>
+            </p>
+            <p>
+                2. We introduce the concept of <b style="color: #fe8e8e">semantic orientation</b>, representing the object orientation condition on open vocabulary language. Such as the orientation of <i><b>"top," "handle," and "pouring water."</b></i>
+            </p>
+            <p>
+                3. We construct <b style="color: #fe8e8e">OrienText300K</b>, a large paired dataset of point clouds, text, and orientation. We trained <b style="color: #fe8e8e">PointSO</b>, the first Open-Vocabulary Orientation Model.
+            </p>
+            <p>
+                4. Based on PointSO, we propose <b style="color: #fe8e8e">SoFar, the first 6-DoF spatial understanding LLM</b>, which achieves a 13.1% performance improvement on the 6-DoF object rearrangement task and a 47.2% improvement over OpenVLA on the SimplerEnv benchmark.
+            </p>
+            <p>
+                5. We propose two benchmarks, <b>Open6DOR V2</b> and <b>6-DoF SpatialBench</b>, which evaluate 6-DoF rearrangement capability and 6-DoF spatial understanding capability, respectively.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="my-block">-->
+<!--      <div class="columns is-centered has-text-centered">-->
+<!--        <div class="column is-four-fifths">-->
+<!--          <h2 class="title is-3">Abstract</h2>-->
+<!--          <div class="content has-text-justified">-->
+<!--            <p>-->
+<!--              Spatial intelligence is an indispensable part of embodied AI. Recent works endow embodied agents with limited aspects of spatial intelligence by developing the ability to perceive object locations and positional relations, overlooking precise perception of object orientation. Legging behind in this aspect renders limited robotic manipulation capabilities for numerous tasks requiring intra-object spatial understanding, e.g., stocking goods into a shelf with their logos oriented toward the customers. In this paper, we advance spatial intelligence to the next level by investigating orientational intelligence. We make the first endeavor to connect semantics to object orientation, obviating the need to describe object orientations based on references or canonical status.-->
+<!--              Specifically, we build an orientation foundation model, namely PointSO, which infers direction vectors clearly associated with a specific object interaction function. To train PointSO, we curate OrienText300K, a large-scale 3D model dataset annotated with semantic direction vectors. Furthermore, we integrate PointSO into a Vision-and-Language Model (VLM) system to generate actions for robotic manipulation with both positional and orientational awareness.-->
+<!--              Extensive experiments on simulation and real-world environments demonstrate that we make full-stack contributions in endowing embodied agents with groundbreaking manipulation capabilities.-->
+<!--            </p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+  <div class="container is-fullhd">
+    <div class="my-block">
+        <div class="column is-full-width">
+          <h2 class="title is-3">SoFar Robotic Manipulation Pipeline</h2>
+
+          <div>
+            <img src="images/pipeline.png"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+          </div>
+
+          <h2 class="content has-text-justified">
+              Given the language instruction, SoFar prompts the VLM to obtain task-oriented object phases and semantic orientation descriptions.
+              Then, SoFar leverage foundation models Florence-2 and SAM to segment depth point clouds and our PointSO to obtain semantic orientations.
+              Summarizing 3D object-centric information, an orientation-aware scene graph is constructed and encoded into languages.
+              The VLM takes the RGB image and the scene graph and outputs the queried spatial understanding VQA or translation for manipulation.
+          </h2>
+
+      </div>
+    </div>
+
+    <div class="my-block">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Real-World Experiments</h2>
+          <h2 class="content has-text-justified">
+              We show the quantitative evaluation of zero-shot real world language-grounded rearrangement with SoFar. We design <b>60</b> diverse real world experimental tasks involving over <b>100</b> diverse objects.
+          </h2>
+          <div>
+          <img src="images/real_experment.png"
+                     class="interpolation-image"
+                     alt="Interpolation end reference image."
+                     />
+          </div>
+        </div>
+    </div>
+
+    <div class="my-block">
+      <div class="column is-full-width">
+
+        <h2 class="title is-3">Demo</h2>
+
+        <p class="content has-text-justified">
+            SoFar is capable of performing various complex object manipulation with spatial relationships and re-orientation tasks and can generalize across different embodiments, such as dexterous hands.
+        </p>
+
+        <div class="container is-clipped">
+        <div id="slider3" class="custom-slider2">
+
+            <div class='card-0'>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/new_4.mp4' type='video/mp4'></video>
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Pick up the teapot and pour water into the cup.</div>
+                    </div>
+                </div>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/gripper_4.mp4' type='video/mp4'></video>
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Take out the test tube with the green solution.</div>
+                    </div>
+                </div>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/dexhand_4.mp4' type='video/mp4'></video>
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Rotate Loopy to face the yellow dragon doll.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='card-0'>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/new_5.mp4' type='video/mp4'></video>
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Place the right bottle into the box and arrange it in a 3×3 pattern.</div>
+                    </div>
+                </div>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/gripper_5.mp4' type='video/mp4'></video>
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Rotate the flashlight to illuminate the loopy.</div>
+                    </div>
+                </div>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/dexhand_5.mp4' type='video/mp4'></video>
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Upright the bottle.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='card-0'>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/new_6.mp4' type='video/mp4'></video>
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Upside down the bottle.</div>
+                    </div>
+                </div>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/gripper_6.mp4' type='video/mp4'></video>
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Put the chili into the basket.</div>
+                    </div>
+                </div>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/dexhand_6.mp4' type='video/mp4'></video>
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Upright the fallen wine glass and arrange it neatly in a row with the other wine glasses.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='card-0'>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/new_1.mp4' type='video/mp4'></video>
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Insert the pen into the pen holder.</div>
+                    </div>
+                </div>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/gripper_1.mp4' type='video/mp4'></video>
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Pick the highest box and place it on the right.</div>
+                    </div>
+                </div>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/dexhand_1.mp4' type='video/mp4'></video>
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Pick the box and place it to the right of the doll.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='card-0'>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/new_2.mp4' type='video/mp4'></video>
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>pick baseball and place it in the cart, then turn the cart to right.</div>
+                    </div>
+                </div>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/gripper_2.mp4' type='video/mp4'></video>
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Pull out a tissue.</div>
+                    </div>
+                </div>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/dexhand_2.mp4' type='video/mp4'></video>
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Pick up the cabbage and place it in the basket.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='card-0'>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/new_3.mp4' type='video/mp4'></video>
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Pour out chips from the chips cylinder to the plate.</div>
+                    </div>
+                </div>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/gripper_3.mp4' type='video/mp4'></video>
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Aim the camera at the toy truck.</div>
+                    </div>
+                </div>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/dexhand_3.mp4' type='video/mp4'></video>
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Pick up the Lego blocks and place it between the two toy truck.</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+    </div>
+    </div>
+
+    <div class="my-block">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Navigation Demo</h2>
+          <div>
+          <h2 class="content has-text-justified">
+            Semantic orientation can not only be applied to manipulation tasks but also to robotic navigation task.
+            This orientation-aware constraint enhances the navigation process by ensuring precise alignment with the desired orientation, thereby improving task performance in scenarios where directionality is critical.
+          </h2>
+
+          <div class="rows">
+            <div class="columns">
+              <div class="column has-text-centered">
+                <video class='lazy' autoplay loop muted width='100%' ><source data-src='./videos/navi_1.mp4' type='video/mp4'></video>
+                  Move to facing the front of the microwave.
+              </div>
+              <div class="column has-text-centered">
+                <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/navi_2.mp4' type='video/mp4'></video>
+                  Move to facing the third chair‘s back.
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <br>
+
+    <div class="my-block">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Long Horizon Demo</h2>
+          <div>
+          <h2 class="content has-text-justified">
+              Our model can complete multiple consecutive tasks, including pick & place, articulated object manipulation, and 6-DoF object rearrangement.
+          </h2>
+
+          <div class="rows">
+            <div class="columns">
+              <div class="column has-text-centered">
+                <video class='lazy' autoplay loop muted width='100%' ><source data-src='./videos/long_1.mp4' type='video/mp4'></video>
+                  Clean the table.
+              </div>
+              <div class="column has-text-centered">
+                <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/long_2.mp4' type='video/mp4'></video>
+                  6-DoF Shelf Rearrangement.
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <br>
+
+    <div class="my-block">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Close-Loop Planning</h2>
+          <div>
+          <h2 class="content has-text-justified">
+              We demonstrate the closed-loop replan capabilities of SoFar within Simpler-Env.
+              <br>
+              In (a), model accidentally knocks over the Coke can during motion. Subsequently, we re-plan and successfully achieve the grasp.
+              <br>
+              In (b), model initially misidentified the coke can as a Fanta can. After correction, the model re-identifies and locates the correct object.
+          </h2>
+
+          <div class="rows">
+            <div class="columns">
+              <div class="column has-text-centered">
+                <video class='lazy' autoplay loop muted width='100%' ><source data-src='./videos/close_loop1.mp4' type='video/mp4'></video>
+                  (a) Pick coke can.
+              </div>
+              <div class="column has-text-centered">
+                <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/close_loop2.mp4' type='video/mp4'></video>
+                  (b) Pick coke can.
+              </div>
+            </div>
+          </div>
+    </div>
+
+
+    <br>
+
+</section>
+
+<div>
+  <div class="container is-max-widescreen content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{qi2025sofar,
+      author = {Qi, Zekun and Zhang, Wenyao and Ding, Yufei and Dong, Runpei and Yu, Xinqiang and Li, Jingwen and Xu, Lingyun and Li, Baoyu and He, Xialin and Fan, Guofan and Zhang, Jiazhao and He, Jiawei and Gu, Jiayuan and Jin, Xin and Ma, Kaisheng and Zhang, Zhizheng and Wang, He and Yi, Li},
+      title = {SoFar: Language-Grounded Orientation Bridges Spatial Reasoning and Object Manipulation},
+      journal = {arXiv preprint arXiv:2502.13143},
+      year = {2025}
+    }</code></pre>
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer" style="padding: 2em;">
+    <div class="content has-text-centered">
+      <p>
+        The website template is borrowed from by <a href="https://qizekun.github.io/shapellm/">ShapeLLM</a> and <a href="https://moka-manipulation.github.io/">MoKA</a>. We thank the authors for their codebase.
+      </p>
+    </div>
+  </footer>
+
+
+</body>
+</html>

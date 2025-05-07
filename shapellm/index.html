@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="ShapeLLM: Universal 3D Object Understanding for Embodied Interaction">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShapeLLM: Universal 3D Object Understanding for Embodied Interaction</title>
+    <link rel='icon' type='image/jpg' href='static/assets/icon.jpg'>
+    <link rel="stylesheet" href="./static/css/own.min.css">
+    <link rel="stylesheet" href="./static/css/custom.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Shantell+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" rel="stylesheet"/>
+    <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./static/css/index.min.css">
+    <script defer src="./static/js/index.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <video class="video lazy" autoplay loop playsinline muted>
+            <source data-src="static/assets/shapellm.mp4" type="video/mp4"> </source>
+        </video>
+    </div>
+
+<section class="hero">
+    <div class="hero-body-background">
+        <div class="hero-body-background-div"></div>
+        <div style="text-align: center; z-index: 1; margin-top: 100px">
+            <p class="word1 shakefont shadowtext" style="margin-right: -10px; color: #FFC5C5;font-family:Acme">S</p>
+            <p class="word2 shakefont shadowtext" style="margin-right: -2px; color: #ecd1aa;font-family:Acme">h</p>
+            <p class="word3 shakefont shadowtext" style="margin-right: -2px; color: #fe8e8e;font-family:Acme">a</p>
+            <p class="word4 shakefont shadowtext" style="margin-right: -10px; color: #98d4e6;font-family:Acme">p</p>
+            <p class="word5 shakefont shadowtext" style="margin-right: -10px; color: #c8a4dd;font-family:Acme">e</p>
+            <p class="shakefont shadowtext" style="color: #9fd8ca;font-family:Acme">L</p>
+            <p class="shakefont shadowtext" style="color: #9fd8ca;font-family:Acme">L</p>
+            <p class="shakefont shadowtext" style="color: #9fd8ca;font-family:Acme">M</p>
+
+            <p class="acmefont shadowtext high-font" style="color: #FFFFFF;">
+                Universal 3D Object Understanding for Embodied Interaction
+                &nbsp;&nbsp;&nbsp; ECCV 2024
+            </p>
+        </div>
+        <div class="columns is-centered" style="z-index: 1; margin-top: -50px">
+            <div class="column has-text-centered ">
+                <div class="publication-authors shadowtext authors-font" style="color: #FFFFFF;font-weight: bold;font-family:DMSerifText;">
+                    <span class="author-block sansfont"><a href="https://qizekun.github.io">Zekun Qi</a><sup>1</sup> &nbsp;&nbsp;</span>
+                    <span class="author-block sansfont"><a href="https://runpeidong.com">Runpei Dong</a><sup>1</sup> &nbsp;&nbsp;&nbsp;</span>
+                    <span class="author-block sansfont">Shaochen Zhang<sup>1</sup> &nbsp;&nbsp;&nbsp;</span>
+                    <span class="author-block sansfont"><a href="https://geng-haoran.github.io/">Haoran Geng</a><sup>2</sup> &nbsp;&nbsp;&nbsp;</span>
+                    <span class="author-block sansfont">Chunrui Han<sup>3</sup> &nbsp;&nbsp;&nbsp;</span>
+                    <span class="author-block sansfont">Zheng Ge<sup>3</sup> &nbsp;&nbsp;&nbsp;</span>
+                    <span class="author-block sansfont"><a href="https://ericyi.github.io/">Li Yi</a><sup>4</sup> &nbsp;&nbsp;&nbsp;</span>
+                    <span class="author-block sansfont"><a href="http://group.iiis.tsinghua.edu.cn/~maks/leader.html">Kaisheng Ma</a><sup>4</sup></span>
+                </div>
+
+                <div class="publication-authors shadowtext authors-font" style="color: #FFFFFF;font-weight: bold;font-family:DMSerifText; margin-bottom: 4pt;">
+                    <span class="author-block sansfont"><sup>1</sup>Xi'an JiaoTong University &nbsp;&nbsp;</span>
+                    <span class="author-block sansfont"><sup>2</sup>Peking University &nbsp;&nbsp;</span>
+                    <span class="author-block sansfont"><sup>3</sup>Megvii Technology &nbsp;&nbsp;</span>
+                    <span class="author-block sansfont"><sup>4</sup>Tsinghua University</span>
+                </div>
+
+                <div class="column has-text-centered" style="font-family:DMSerifText">
+                    <div class="publication-links">
+                        <span class="link-block">
+                            <a href="https://arxiv.org/pdf/2402.17766.pdf" class="external-link button is-normal is-rounded light-btn btn-font">
+                            <span class="icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </span>
+                            <span class="sansfont">arXiv</span>
+                            </a>
+                        </span>
+
+                        <span class="link-block">
+                            <a href="static/assets/bib.txt" class="external-link button is-normal is-rounded light-btn btn-font">
+                            <span class="icon">
+                                <i class="fa fa-quote-left"></i>
+                            </span>
+                            <span class="sansfont">Cite</span>
+                            </a>
+                        </span>
+
+                       <span class="link-block">
+                            <a href="https://github.com/qizekun/ShapeLLM" class="external-link button is-normal is-rounded light-btn btn-font">
+                            <span class="icon">
+                                <i class="fa-solid fa-desktop"></i>
+                            </span>
+                            <span class="sansfont">Code</span>
+                            </a>
+                        </span>
+
+                        <span class="link-block">
+                            <a href="https://huggingface.co/collections/qizekun/shapellm-65e978379c1260a85abe8aee" class="external-link button is-normal is-rounded light-btn btn-font">
+                            <span class="icon">
+                                <i class="fa-solid fa-desktop"></i>
+                            </span>
+                            <span class="sansfont">Huggingface</span>
+                            </a>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+</section>
+
+
+<section class="hero">
+    <div class="hero-body-subtitle"  style="display: block">
+        <div class="columns is-centered has-text-centered">
+            <div class="container is-max-maxwidth">
+                <div class="title sansfont mode-font" style="font-family:'Acme';color:#595959;">
+                    Pipeline
+                </div>
+                <img src="./static/assets/framework.jpg" style="max-width: 100%">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="hero">
+    <div class="hero-body-subtitle"  style="display: block">
+        <div class="columns is-centered has-text-centered">
+            <div class="container is-max-maxwidth">
+                <div class="title sansfont mode-font" style="font-family:'Acme';color:#595959;">
+                    🔥Highlights
+                </div>
+                <div class="content has-text-justified">
+                    <ol type="1">
+                        <li>ShapeLLM is the first 3D Multimodal Large Language Model designed for <span style="color: #fe8e8e;"><b>embodied interaction</b></span>.</li>
+                        <br>
+                        <li>ShapeLLM supports <span style="color: #fe8e8e;"><b>single-view colored point cloud input</b></span>, which can be effortlessly obtained from RGBD cameras.</li>
+                        <br>
+                        <li>We introduce a robust 3D QA benchmark, <span style="color: #fe8e8e;"><b>3D MM-Vet</b></span>, encompassing various variants including single-view, noise jitter, etc.</li>
+                        <br>
+                        <li>We extend the powerful point encoder architecture, <span style="color: #fe8e8e;"><b>ReCon++</b></span>, achieving state-of-the-art performance across a range of representation learning tasks.</li>
+                        <br>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="hero">
+    <div class="hero-body-subtitle"  style="display: block">
+        <div class="columns is-centered has-text-centered">
+            <div class="container is-max-maxwidth">
+                <div class="title sansfont mode-font" style="font-family:'Acme';color:#595959;">
+                    Motivation
+                </div>
+            <div class="content has-text-justified">
+            <b>What makes better 3D representations that bridge language models and interaction-oriented 3D object understanding?</b>
+            <ol type="1">
+                <li><b>3D Point Clouds as Inputs</b>. Compared to 2D images, 3D point clouds provide a more accurate representation of the physical environment, encapsulating sparse yet highly precise geometric data. Moreover, 3D point clouds are crucial in facilitating embodied interactions necessitating accurate 3D structures like 6-DoF object pose estimation. </li>
+                <br>
+                <li><b>Selective Multi-View Distillation</b>. Interacting with objects typically necessitates an intricate 3D understanding that involves knowledge at various levels and granularities. For instance, a whole-part high-level semantic understanding is needed for interactions like opening a large cabinet, while detailed, high-resolution (i.e., low-level) semantics are crucial for smaller objects like manipulating a drawer handle. However, existing works mainly distill single-view high-resolution object features from 2D foundation models, providing a complementary understanding. The potential of multi-view images, which offer abundant multilevel features due to view variation and geometry consistency, is often neglected.</li>
+                <br>
+                <li><b>3D Visual Instruction Tuning</b>. Instruction tuning has been proven effective in improving LLMs' alignment capability. To realize various 3D understanding tasks with a universal language interface, ShapeLLM is trained through instruction-following tuning on constructed language-output data. However, similar to 2D visual instruction tuning, the data-dessert issue is even worse since no object-level data is available, unlike 2D. To validate the efficacy of ShapeLLM, we first construct ~45K instruction-following data using the advanced GPT-4V on the processed Objaverse dataset and 30K embodied part understanding data from GAPartNet for supervised fine-tuning.</li>
+            </ol>
+        </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- <div style="border: #999999 1px solid;"></div> -->
+
+
+<div style="border: #ffffff 20px solid;"></div>
+
+<section class="hero">
+    <div class="hero-body-subtitle-light"  style="display: block">
+        <div class="columns is-centered has-text-centered">
+            <div class="container is-max-maxwidth">
+                <div class="title is-2 sansfont" style="font-family:'Acme';color:#595959; font-size: 68px;">
+                    Gallery
+                </div>
+                <div class="note-font"style="margin-top: -10pt; font-style: italic;">
+                    *conversations generated with instructions provided by our users
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container is-clipped">
+        <div id="slider3" class="custom-slider2">
+
+            <div class='card-0'>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <img src="./static/assets/p7.jpg">
+<!--                        <video class='lazy' autoplay loop muted width='100%'><source data-src='videos/g7.mp4' type='video/mp4'></video>-->
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Single-View Point Cloud Understanding</div>
+                    </div>
+                </div>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <img src="./static/assets/p8.jpg">
+<!--                        <video class='lazy' autoplay loop muted width='100%'><source data-src='videos/g8.mp4' type='video/mp4'></video>-->
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Scene Understanding</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='card-0'>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <img src="./static/assets/p1.jpg">
+<!--                        <video class='lazy' autoplay loop muted width='100%'><source data-src='videos/g1.mp4' type='video/mp4'></video>-->
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Planning & Task Decomposition</div>
+                    </div>
+                </div>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <img src="./static/assets/p6.jpg">
+<!--                        <video class='lazy' autoplay loop muted width='100%'><source data-src='videos/g4.mp4' type='video/mp4'></video>-->
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Representation Learning</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='card-0'>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <img src="./static/assets/p3.jpg">
+<!--                        <video class='lazy' autoplay loop muted width='100%'><source data-src='videos/g2.mp4' type='video/mp4'></video>-->
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Embodied Visual Grounding</div>
+                    </div>
+                </div>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <img src="./static/assets/p4.jpg">
+<!--                        <video class='lazy' autoplay loop muted width='100%'><source data-src='videos/g5.mp4' type='video/mp4'></video>-->
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Precise Referring Dialogue</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='card-0'>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <img src="./static/assets/p5.jpg">
+<!--                        <video class='lazy' autoplay loop muted width='100%'><source data-src='videos/g3.mp4' type='video/mp4'></video>-->
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>3D Captioning</div>
+                    </div>
+                </div>
+                <div class='card card-1'>
+                    <div class='card-image'>
+                        <img src="./static/assets/p2.jpg">
+<!--                        <video class='lazy' autoplay loop muted width='100%'><source data-src='videos/g6.mp4' type='video/mp4'></video>-->
+                    </div>
+                    <div class='card-content'>
+                        <div class='prompt'>Vision Question Answering</div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+<section class="hero">
+    <div class="hero-body-subtitle-light"  style="display: block">
+        <div class="columns is-centered has-text-centered">
+            <div class="container is-max-maxwidth">
+                <div class="title is-2 sansfont" style="font-family:'Acme';color:#595959; font-size: 68px;">
+                    ReCon++
+                </div>
+                <div class="note-font"style="margin-top: -10pt; font-style: italic;">
+                    ReCon++ is a powerful point encoder architecture that achieves state-of-the-art performance across a range of representation learning tasks.
+                    <br>
+                    Such as <span style="color: #fe8e8e;"><b>Fine-tuned 3D recognition</b></span>, <span style="color: #fe8e8e;"><b>Few-shot 3D recognition</b></span>, and <span style="color: #fe8e8e;"><b>Zero-shot 3D recognition</b></span>.
+                </div>
+                <br>
+                <img src="./static/assets/table.jpg" style="max-width: 75%">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<section class="hero">
+    <div class="hero-body-subtitle-light"  style="display: block">
+        <div class="columns is-centered has-text-centered">
+            <div class="container is-max-maxwidth">
+                <div class="title is-2 sansfont" style="font-family:'Acme';color:#595959; font-size: 68px;">
+                    3D MM-Vet
+                </div>
+                <div class="note-font"style="margin-top: -10pt; font-style: italic;">
+                    3D MM-Vet is the first 3D multimodal comprehension evaluation benchmark, which includes five different levels of tasks.
+                </div>
+                <br>
+                <img src="./static/assets/mmvet.jpg" style="max-width: 80%">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<section class="hero">
+    <div class="hero-body-subtitle"  style="display: block">
+        <div class="container is-max-maxwidth">
+            <div class="title sansfont mode-font has-text-centered" style="font-family:'Acme';color:#595959;">
+                Citation
+            </div>
+            <code style="">
+                @article{qi2024shapellm,<br>
+                &nbsp; author = {Qi, Zekun and Dong, Runpei and Zhang, Shaochen and Geng, Haoran and Han, Chunrui and Ge, Zheng and Yi, Li and Ma, Kaisheng},<br>
+                &nbsp; title  = {ShapeLLM: Universal 3D Object Understanding for Embodied Interaction},<br>
+                &nbsp; journal = {arXiv preprint arXiv:2402.17766},<br>
+                &nbsp; year   = {2024},<br>
+            }</code>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer" style="padding: 2em;">
+    <div class="content has-text-centered">
+      <p>
+        The website template is borrowed from by <a href="https://makepixelsdance.github.io/">Make Pixels Dance</a> and <a href="https://ahnsun.github.io/merlin/">Merlin</a>. We thank the authors for their codebase.
+      </p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
