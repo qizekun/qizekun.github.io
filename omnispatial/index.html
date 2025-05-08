@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="OmniSpatial: Towards Comprehensive Spatial Reasoning Benchmark for Vision Language Models">
+  <meta name="keywords" content="Spatial Reasoning, Vision Language Models, Benchmark">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OmniSpatial: Towards Comprehensive Spatial Reasoning Benchmark for Vision Language Models</title>
+	<link rel="icon" type="image/png" href="images/sofar_icon.png"/>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+    <link rel="stylesheet" href="./static/css/own.min.css">
+    <link rel="stylesheet" href="./static/css/custom.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Shantell+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" rel="stylesheet"/>
+    <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <script defer src="./static/js/index.min.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title" style="font-size: 38px;">
+              <a class="word1 shakefont" style="color: #FFC5C5">O</a><a class="word2 shakefont" style="color: #ecd1aa">m</a><a class="word3 shakefont" style="color: #fe8e8e">n</a><a class="word4 shakefont" style="color: #98d4e6">i</a>Spatial:
+              <a target="_blank" style="color: black">Towards Comprehensive Spatial Reasoning Benchmark for Vision Language Models</a></h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a>Mengdi Jia<sup>1*</sup></a></span>,
+            <span class="author-block">
+              <a href="https://qizekun.github.io/">Zekun Qi<sup>14*</sup></a></span>,
+            <span class="author-block">
+              <a>Shaochen Zhang<sup>2</sup></a></span>,
+            <span class="author-block">
+              <a>Wenyao Zhang<sup>3</sup></a></span>,
+            <br>
+            <span class="author-block">
+              <a>Xinqiang Yu<sup>4</sup></a></span>
+            <span class="author-block">
+              <a href="https://jiaweihe.com/">Jiawei He<sup>4</sup></a></span>
+            <span class="author-block">
+                <a href="https://hughw19.github.io/">He Wang<sup>45</sup></a></span>,
+            <span class="author-block">
+              <a href="https://ericyi.github.io/">Li Yi<sup>167†</sup></a></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">* equal contribution</span>
+            <span class="author-block">† corresponding authors</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Tsinghua University</span>
+            <span class="author-block"><sup>2</sup>Xian Jiaotong University</span>
+            <span class="author-block"><sup>3</sup>Shanghai Jiao Tong University</span>
+            <span class="author-block"><sup>4</sup>Galbot</span>
+            <br>
+            <span class="author-block"><sup>5</sup>Peking University</span>
+            <span class="author-block"><sup>6</sup>Shanghai Qi Zhi Institute</span>
+            <span class="author-block"><sup>7</sup>Shanghai AI Laboratory</span>
+          </div>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2502.13143"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/qizekun/SoFar"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/collections/qizekun/sofar-67b511129d3146d28cea9920"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa-face-smiling-hands"></i>
+                  </span>
+                  <span>Huggingface</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-fullhd">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered is-centered">
+          <div>
+          <img src="images/teaser.png"
+                     class="interpolation-image"
+                     alt="Interpolation end reference image."
+                     />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .video-container {
+    position: relative;
+    width: 85%;
+  }
+
+  video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .control-btn {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .control-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .sound-btn {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .play-btn {
+    bottom: 10px;
+    left: 10px;
+  }
+</style>
+
+<script>
+  let video = document.getElementById("teaser");
+  let soundBtn = document.getElementById("toggleSound");
+  let playBtn = document.getElementById("togglePlay");
+
+  soundBtn.addEventListener("click", function () {
+    video.muted = !video.muted;
+    this.innerHTML = video.muted ? "🔇" : "🔊";
+  });
+
+  playBtn.addEventListener("click", function () {
+    if (video.paused) {
+      video.play();
+      this.innerHTML = "⏸️";
+    } else {
+      video.pause();
+      this.innerHTML = "▶️";
+    }
+  });
+</script>
+
+
+
+<!--<section class="section">-->
+<!--   <div class="container is-max-desktop">-->
+<!--    <div class="my-block">-->
+<!--      <div class="columns is-centered has-text-centered">-->
+<!--        <div class="column is-four-fifths">-->
+<!--          <h2 class="title is-3">Highlight</h2>-->
+<!--          <div class="content has-text-justified" style="text-weight: bold;">-->
+<!--            <p>-->
+<!--                1. Complex robotic manipulation tasks are constrained by the understanding of orientation, such as <i><b>"upright a tilted wine glass"</b></i>, or <i><b>"plugging a cord into a power strip."</b></i>-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                2. We introduce the concept of <b style="color: #fe8e8e">semantic orientation</b>, representing the object orientation condition on open vocabulary language. Such as the orientation of <i><b>"top," "handle," and "pouring water."</b></i>-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                3. We construct <b style="color: #fe8e8e">OrienText300K</b>, a large paired dataset of point clouds, text, and orientation. We trained <b style="color: #fe8e8e">PointSO</b>, the first Open-Vocabulary Orientation Model.-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                4. Based on PointSO, we propose <b style="color: #fe8e8e">SoFar, the first 6-DoF spatial understanding LLM</b>, which achieves a 13.1% performance improvement on the 6-DoF object rearrangement task and a 47.2% improvement over OpenVLA on the SimplerEnv benchmark.-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                5. We propose two benchmarks, <b>Open6DOR V2</b> and <b>6-DoF SpatialBench</b>, which evaluate 6-DoF rearrangement capability and 6-DoF spatial understanding capability, respectively.-->
+<!--            </p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+  <div class="container is-max-desktop">
+    <div class="my-block">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Spatial reasoning is a key aspect of cognitive psychology, remains a major bottleneck for current vision-language models (VLMs). While extensive research has aimed to evaluate or improve VLMs’ understanding of basic spatial relations, such as distinguishing left from right, near from far, and object counting, these tasks represent only the most fundamental level of spatial reasoning.
+              In this work, we introduce OmniSpatial, a comprehensive and challenging benchmark for spatial reasoning, grounded in cognitive psychology. OmniSpatial covers four major categories: dynamic reasoning, complex spatial logic, spatial interaction, and perspective-taking, with 50 fine-grained subcategories. Through Internet data crawling and careful manual annotation, we construct over 1.5K question-answer pairs.
+              Extensive experiments show that both open- and closed-source VLMs, as well as existing reasoning and spatial understanding models, exhibit significant limitations in comprehensive spatial understanding. We further analyze failure cases and propose potential directions for future research.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-fullhd">
+    <div class="my-block">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Tasks Demonstration</h2>
+          <h2 class="content has-text-justified">
+              <p>OmniSpatial provides representative examples across its four main categories of spatial reasoning.</p>
+              <p><strong>Perspective Taking:</strong> Tasks demonstrate the ability to understand spatial relationships from different viewpoints, including egocentric (your view), allocentric (global view), and hypothetical perspectives.</p>
+              <p><strong>Dynamic Reasoning:</strong> This includes tasks that involve understanding object movement and changes, such as manipulation (operational position selection, movement direction determination, intent recognition)  and motion analysis (uniform motion, variable motion, spatial compatibility).</p>
+              <p><strong>Spatial Interaction:</strong> These tasks focus on engaging with spatial environments, including traffic analysis (anomaly detection, sign recognition, action recognition, risk detection, behavior guidance, contextual analysis)  and manipulation (UI interaction, object detection, spatial localization, pose estimation, geospatial strategy).</p>
+              <p><strong>Complex Logic:</strong> This category covers higher-level reasoning like pattern recognition (style, quantity, attributes, location)  and geometric reasoning (polyhedron unfolding, sections and projections, mental rotation, assembly, analytical geometry).</p>
+              <p>These examples showcase the diversity and complexity of tasks within the OmniSpatial benchmark, which are inspired by real-life scenarios.</p>
+          </h2>
+          <div>
+            <img src="images/tasks_demonstration.png"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+          </div>
+      </div>
+    </div>
+
+    <div class="my-block">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Main Experiments</h2>
+          <h2 class="content has-text-justified">
+            <p>The main experiments evaluated state-of-the-art Vision-Language Models (VLMs) on the OmniSpatial benchmark. The benchmark includes both proprietary models like GPT-4o, Claude, and Gemini series, as well as open-source models such as Qwen-VL, InternVL, and LLaVA. Specialized spatial reasoning models were also included in the evaluation.</p>
+          </h2>
+          <div>
+          <img src="images/table.png" class="interpolation-image" alt="Interpolation end reference image."/>
+          </div>
+        </div>
+    </div>
+
+<!--    <div class="my-block">-->
+<!--        <div class="column is-full-width">-->
+<!--          <h2 class="title is-3">Navigation Demo</h2>-->
+<!--          <div>-->
+<!--          <h2 class="content has-text-justified">-->
+<!--            Semantic orientation can not only be applied to manipulation tasks but also to robotic navigation task.-->
+<!--            This orientation-aware constraint enhances the navigation process by ensuring precise alignment with the desired orientation, thereby improving task performance in scenarios where directionality is critical.-->
+<!--          </h2>-->
+
+<!--          <div class="rows">-->
+<!--            <div class="columns">-->
+<!--              <div class="column has-text-centered">-->
+<!--                <video class='lazy' autoplay loop muted width='100%' ><source data-src='./videos/navi_1.mp4' type='video/mp4'></video>-->
+<!--                  Move to facing the front of the microwave.-->
+<!--              </div>-->
+<!--              <div class="column has-text-centered">-->
+<!--                <video class='lazy' autoplay loop muted width='100%'><source data-src='./videos/navi_2.mp4' type='video/mp4'></video>-->
+<!--                  Move to facing the third chair‘s back.-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--    </div>-->
+
+</section>
+
+<div>
+  <div class="container is-max-widescreen content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{qi2025sofar,
+      author = {Qi, Zekun and Zhang, Wenyao and Ding, Yufei and Dong, Runpei and Yu, Xinqiang and Li, Jingwen and Xu, Lingyun and Li, Baoyu and He, Xialin and Fan, Guofan and Zhang, Jiazhao and He, Jiawei and Gu, Jiayuan and Jin, Xin and Ma, Kaisheng and Zhang, Zhizheng and Wang, He and Yi, Li},
+      title = {OmniSpatial: Towards Comprehensive Spatial Reasoning Benchmark for Vision Language Models},
+      journal = {arXiv preprint arXiv:2502.13143},
+      year = {2025}
+    }</code></pre>
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer" style="padding: 2em;">
+    <div class="content has-text-centered">
+      <p>
+        The website template is borrowed from <a href="https://qizekun.github.io/sofar/">SoFar</a>.
+      </p>
+    </div>
+  </footer>
+
+
+</body>
+</html>
